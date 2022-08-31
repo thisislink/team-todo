@@ -40,8 +40,4 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 Have fun testing and improving it! 😎
 
-<<<<<<< HEAD
--Hi this is Ramirez.
-=======
-- Angel
->>>>>>> 525a7d6fc6a6cd68490d7b7c29c1483025aad9a4
+abc
