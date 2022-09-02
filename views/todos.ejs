@@ -13,7 +13,6 @@
     <section>
       <!-- NOTE: incomplete -->
 			<% if(todos.length > 0){ %>
-			
 				<h2>Todo:</h2>
 				<ul>
 					<% todos.forEach( el => { %>
@@ -27,14 +26,6 @@
 				</ul>
 			<% } %>
       
-<!-- <ul>
-		<% todos.forEach( el => { %>
-				<li class='todoItem' data-id='<%=el._id%>'>
-						<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-						<span class='del'> Delete </span>
-				</li>
-    	<% }) %>    
-    </ul> -->
       <!-- NOTE: complete -->
       <!-- TODO: render completed todos -->
 			<% if(left < todos.length){ %>
