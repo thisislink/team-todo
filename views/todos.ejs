@@ -10,8 +10,11 @@
   <body>
     <h1>Todos APP</h1>
 
-    <section>
+    <section class="week">
+			<div class="container">
+				<section class="day">
       <!-- NOTE: incomplete -->
+			<!-- TODO:  -->
 			<% if(todos.length > 0){ %>
 				<h2>Todo:</h2>
 				<ul>
@@ -25,9 +28,7 @@
 					<% }) %>  
 				</ul>
 			<% } %>
-      
-      <!-- NOTE: complete -->
-      <!-- TODO: render completed todos -->
+      <!-- NOTE: complete - renders completed todos only-->
 			<% if(left < todos.length){ %>
 				<hr/>
 				<h2>Completed:</h2>
@@ -42,8 +43,137 @@
 					<% }) %>  
 				</ul>
 			<% } %>
-   			 
     </section>
+		<section class="day">
+      <!-- NOTE: incomplete -->
+			<!-- TODO:  -->
+			<% if(todos.length > 0){ %>
+				<h2>Todo:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed !== true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+      <!-- NOTE: complete - renders completed todos only-->
+			<% if(left < todos.length){ %>
+				<hr/>
+				<h2>Completed:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed === true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+    </section>
+		<section class="day">
+      <!-- NOTE: incomplete -->
+			<!-- TODO:  -->
+			<% if(todos.length > 0){ %>
+				<h2>Todo:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed !== true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+      <!-- NOTE: complete - renders completed todos only-->
+			<% if(left < todos.length){ %>
+				<hr/>
+				<h2>Completed:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed === true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+    </section>
+		<section class="day">
+      <!-- NOTE: incomplete -->
+			<!-- TODO:  -->
+			<% if(todos.length > 0){ %>
+				<h2>Todo:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed !== true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+      <!-- NOTE: complete - renders completed todos only-->
+			<% if(left < todos.length){ %>
+				<hr/>
+				<h2>Completed:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed === true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+    </section>
+		<section class="day">
+      <!-- NOTE: incomplete -->
+			<!-- TODO:  -->
+			<% if(todos.length > 0){ %>
+				<h2>Todo:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed !== true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+      <!-- NOTE: complete - renders completed todos only-->
+			<% if(left < todos.length){ %>
+				<hr/>
+				<h2>Completed:</h2>
+				<ul>
+					<% todos.forEach( el => { %>
+						<% if(el.completed === true){ %>
+							<li class='todoItem' data-id='<%=el._id%>'>
+								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+								<span class='del'> Delete </span>
+							</li>
+						<% } %>
+					<% }) %>  
+				</ul>
+			<% } %>
+    </section>
+			</div>
+		</section>
 
     <h3><%= user.userName %> has <%= left %> things left to do.</h3>
 
