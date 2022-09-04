@@ -12,8 +12,9 @@ module.exports = {
         }
     },
     createTodo: async (req, res)=>{
+                // added the tail portion to give the db object the day to store
         try{
-            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id})
+            await Todo.create({todo: req.body.todoItem, completed: false, userId: req.user.id, day: req.body.day})
             console.log('Todo has been added!')
             res.redirect('/todos')
         }catch(err){
