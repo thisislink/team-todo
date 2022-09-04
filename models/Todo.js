@@ -12,6 +12,10 @@ const TodoSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true
+  },
+  day: {                        // added a new attribtue to the schema, it's always going to have a value defaulted to 'Monday'
+    type: String,               // so the required isn't necessary but idk what else to put
+    required: true
   }
 })
 

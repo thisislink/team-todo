@@ -12,7 +12,9 @@
     <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %> - <%= el.day %></span>
+ 
+                    
                 <span class='del'> Delete </span>
             </li>
     <% }) %>    
@@ -20,10 +22,22 @@
 
     <h2><%= user.userName %> has <%= left %> things left to do.</h2>
 
+    <!-- Added the the <select> block for the days of the week -->
     <form action="/todos/createTodo" method='POST'>
+        <select name='day'>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
         <input type="submit">
     </form>
+
+
 
     <a href="/logout">Logout</a>
 
