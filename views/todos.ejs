@@ -15,10 +15,11 @@
 				<section class="day">
       <!-- NOTE: incomplete -->
 			<!-- TODO:  -->
-			<% if(todos.length > 0){ %>
+			<% if(left){ %>
 				<h2>Todo:</h2>
 				<ul>
-					<% todos.forEach( el => { %>
+					<% todos.forEach( el => {  ;%>
+						
 						<% if(el.completed !== true){ %>
 							<li class='todoItem' data-id='<%=el._id%>'>
 								<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
@@ -59,7 +60,6 @@
     <a href="/logout">Logout</a>
 
     <script src="js/main.js">
-        console.log("hello")
     </script>
   </body>
 </html>
