@@ -8,7 +8,7 @@ A Simple ToDo App is built using the MVC Architecture, we have also implemented 
 
 ---
 
-# Objectives
+# Objectives 
 
 - It's a beginner level app created to understand how MVC concept and logins are added
 
