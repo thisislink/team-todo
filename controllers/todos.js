@@ -4,13 +4,15 @@ module.exports = {
   getTodos: async (req, res) => {
     console.log(req.user);
     try {
+      // NOTE: FINDING TODO BY CURRENT USER ID
       const todoItems = await Todo.find({ userId: req.user.id });
       const itemsLeft = await Todo.countDocuments({
         userId: req.user.id,
         completed: false,
       });
+      console.log(todoItems);
       res.render("todos.ejs", {
-        todos: todoItems,
+        todos: todoItems, // NOTE: render todos
         left: itemsLeft,
         user: req.user,
       });
